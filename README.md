@@ -24,3 +24,8 @@ We are going to build an Netflix Clone App with following functionality.
 - Netflix GPT.
     - Search Bar
     - Movie Suggestions
+
+# Building the Forms
+1. Setting up the Sign In/Sign Up Form
+2. Used a simple toggle function to switch between Sign In/Sign Up Form.
+3. Form Validation is conducted.
