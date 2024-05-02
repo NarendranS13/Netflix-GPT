@@ -1,10 +1,18 @@
 
-import './App.css';
+
+import Body from './Components/Body';
+import Browse from './Components/Browse';
+import Header from './Components/Header';
+import Login from './Components/Login';
 
 function App() {
   return (
-    <div className="text-3xl font-bold text-red-500">
-      Welcome to the Netflix GPT Project.
+    // <>
+    // <Body />
+    // </>
+    <div>
+      {/* <p>This is the React Project</p> */}
+        <Body />
     </div>
   );
 }
