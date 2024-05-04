@@ -55,4 +55,19 @@ We are going to build an Netflix Clone App with following functionality.
 2. Validated the Process via logging the success and error message
 
 # Create the Redux Store to maintain the State of User across the App.
-1. Created redux store with userSlice
+1. Created redux store with userSlice.
+
+# To hold the User State and to allow navigate to Browse section.
+1. Firebase - onAuthStateChanged.
+2. This will hold the state across webpages.
+3. If user is true. Then we can extract the Username, email, Photo etc.
+4. Dispatch this information to the Redux store
+
+# Update the sign up with Dispatch.
+1. To fetch all the information for an newly registered users. 
+2. Use an dispatch.
+3. Redirect to Browse page. 
+
+# Create Log out button.
+1. Use signOut from Firebase auth.
+2. Navigate the user to Sign/Sign up page.
