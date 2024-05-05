@@ -71,3 +71,27 @@ We are going to build an Netflix Clone App with following functionality.
 # Create Log out button.
 1. Use signOut from Firebase auth.
 2. Navigate the user to Sign/Sign up page.
+
+# Bug Fixed
+1. Fixed the issue where non user can access the browse section
+2. Fixed where the user can access the login section
+3. Moving the onAuthStateChanged to Header component.
+
+# Unsubscribed to the OnAuthStateChanged Callback
+1. To avoid unnecessary callback to onAuthStateChanged.
+
+# Add Code Hygiene
+1. Move all the hard coded values into the Constanst file.
+
+# Registerd for TMDB
+1. Registered my App in the TMDB.
+2. Get that Access Token.
+3. Retrieved the Movies list using the given API call.
+
+# UI Structure in Browse Page
+1.Main Container
+    - Video Background
+    - VideoTitle
+2.SecondaryContainer
+    - Movielist * n
+        - cards * n

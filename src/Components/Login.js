@@ -4,15 +4,14 @@ import { checkValidData } from '../Utils/Validate';
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { signInWithEmailAndPassword,updateProfile } from "firebase/auth";
 import { auth } from '../Utils/Firebase';
-import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../Utils/UserSlice';
+import { userAvatar } from '../Utils/Constants';
 
 const Login = () => {
 
   const [isSignInForm,setIsSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
-  const navigate = useNavigate();
   const dispatch = useDispatch();
   const name = useRef(null);
   const email = useRef(null);
@@ -33,11 +32,10 @@ const Login = () => {
             const user = userCredential.user;
             updateProfile(auth.currentUser, {
               displayName: name.current.value, 
-              photoURL: "https://avatars.githubusercontent.com/u/108397072?v=4"
+              photoURL: userAvatar
             }).then(() => {
               const {uid,email,displayName,photoURL} = auth.currentUser;
               dispatch(addUser({uid:uid, email:email, displayName:displayName,photoURL:photoURL}));
-              navigate("/browse");
             }).catch((error) => {
                 setErrorMessage(error);
             });
@@ -48,21 +46,19 @@ const Login = () => {
             const errorCode = error.code;
             const errorMessage = error.message;
             setErrorMessage(errorCode+"-"+errorMessage)
-            navigate("/");
+
           });
     } else {
       // Sign In Logic
             signInWithEmailAndPassword(auth, email.current.value, password.current.value)
         .then((userCredential) => { 
           const user = userCredential.user;
-          navigate("/browse");
 
         })
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
           setErrorMessage(errorCode +"-"+ errorMessage);
-          navigate("/");
         });
     };
 
