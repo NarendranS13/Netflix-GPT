@@ -95,3 +95,13 @@ We are going to build an Netflix Clone App with following functionality.
 2.SecondaryContainer
     - Movielist * n
         - cards * n
+
+# Main Container
+1. Created two Components. 
+2. Video Title and Video Background.
+3. Created an redux store to fetch the details of Movies via MovieSlice.
+4. Populated the data in the Video Title to showcase the Video Title and Overview.
+5. Created the Video Background component.
+6. Fetched the Video Trailer using movieId and used to fetch the Youtube Key.
+7. Embedded the Video in the Background using autoplay=1 and mute=1
+8. Designed the UI using the Tailwind CSS Framework.
