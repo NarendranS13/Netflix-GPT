@@ -11,10 +11,8 @@ const VideoBackground = ({movieid}) => {
 
   return (
     <div className='w-screen h-screen flex items-center justify-center'>
-    {/* // <div className="relative w-full h-screen overflow-hidden"> */}
         <iframe 
                 className='w-screen aspect-video'
-                // className ='absolute inset-0 w-full h-full aspect-w-16 aspect-h-9'
                 src={"https://www.youtube.com/embed/XeDbyVODQ5M?si="+trailerVideo?.key+"?&autoplay=1&mute=1"}
     
                 title="YouTube video player" 
