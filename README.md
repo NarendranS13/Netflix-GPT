@@ -105,3 +105,23 @@ We are going to build an Netflix Clone App with following functionality.
 6. Fetched the Video Trailer using movieId and used to fetch the Youtube Key.
 7. Embedded the Video in the Background using autoplay=1 and mute=1
 8. Designed the UI using the Tailwind CSS Framework.
+
+# Secondary Container.
+1. General Structure.
+            {/* 
+                Movie List - Popular
+                    - Horizontal Cards
+                Movie List - Trending
+                    - Horizontal Cards
+                Movie List - Genre
+                    - Horizontal Cards
+                Movie List - Language.
+                    - Horizontal Cards
+            
+            */}
+
+# Secondary Container
+1. Required 3 custom Hooks to fetch nowPlayingMovies, Popular movies and top rated movies
+2. Created the Movielist using Map method
+3. Movie Card - will showcase the images with horizontal scrolling.
+4. Hidden the Scrolling using Horizontal scoll hidden package.

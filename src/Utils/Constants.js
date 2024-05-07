@@ -10,3 +10,6 @@ export const API_OPTIONS = {
     }
   };
 
+export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500";
+
+export const streamflix_logo = 'https://www.canva.com/design/DAGEdDz041o/nsvazmGMaRRsrQGLbwPg3w/edit?utm_content=DAGEdDz041o&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton'
