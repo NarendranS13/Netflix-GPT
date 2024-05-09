@@ -10,10 +10,11 @@ const MainContainer = () => {
 
     const mainMovie = movies[0];
     // This will throw an error to access the element since at first the redux state is null
-    // console.log(mainMovie);
+    
 
     const {original_title,overview,id} = mainMovie;
-    // console.log(id);
+  
+   
 
   return (
     <div>

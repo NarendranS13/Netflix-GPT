@@ -125,3 +125,14 @@ We are going to build an Netflix Clone App with following functionality.
 2. Created the Movielist using Map method
 3. Movie Card - will showcase the images with horizontal scrolling.
 4. Hidden the Scrolling using Horizontal scoll hidden package.
+
+
+# Integration of Chat GPT API
+
+1. We will create the GPT Search Component
+2. Add them in the Header using an Button.
+3. Added two components.
+3a. GPT Search Page
+3b. GPT Search Bar
+4. Added Multi Language Feature in the App.
+5. Integrate GPT API 
