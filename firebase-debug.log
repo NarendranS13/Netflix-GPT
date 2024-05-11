@@ -1,0 +1,75 @@
+[debug] [2024-05-11T15:00:47.325Z] ----------------------------------------------------------------------
+[debug] [2024-05-11T15:00:47.327Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\naren\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --debug
+[debug] [2024-05-11T15:00:47.327Z] CLI Version:   13.8.3
+[debug] [2024-05-11T15:00:47.328Z] Platform:      win32
+[debug] [2024-05-11T15:00:47.328Z] Node Version:  v18.18.0
+[debug] [2024-05-11T15:00:47.332Z] Time:          Sat May 11 2024 20:30:47 GMT+0530 (India Standard Time)
+[debug] [2024-05-11T15:00:47.332Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-05-11T15:00:47.406Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-05-11T15:00:47.408Z] > authorizing via signed-in user (nren115@gmail.com)
+[debug] [2024-05-11T15:00:47.408Z] [iam] checking project netflix-gpt-f773e for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-05-11T15:00:47.411Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflix-gpt-f773e:testIamPermissions [none]
+[debug] [2024-05-11T15:00:47.412Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflix-gpt-f773e:testIamPermissions x-goog-quota-user=projects/netflix-gpt-f773e
+[debug] [2024-05-11T15:00:47.412Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflix-gpt-f773e:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-11T15:00:48.791Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflix-gpt-f773e:testIamPermissions 200
+[debug] [2024-05-11T15:00:48.791Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflix-gpt-f773e:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-11T15:00:48.793Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/netflix-gpt-f773e [none]
+[debug] [2024-05-11T15:00:49.163Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/netflix-gpt-f773e 200
+[debug] [2024-05-11T15:00:49.164Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/netflix-gpt-f773e {"projectId":"netflix-gpt-f773e","projectNumber":"634877944868","displayName":"Netflix-gpt","name":"projects/netflix-gpt-f773e","resources":{"hostingSite":"netflix-gpt-f773e"},"state":"ACTIVE","etag":"1_4cb6f0b6-7e16-4dee-a01f-8f5480eaa3c6"}
+[info] 
+[info] === Deploying to 'netflix-gpt-f773e'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2024-05-11T15:00:49.170Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflix-gpt-f773e/versions [none]
+[debug] [2024-05-11T15:00:49.170Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflix-gpt-f773e/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2024-05-11T15:00:50.570Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflix-gpt-f773e/versions 200
+[debug] [2024-05-11T15:00:50.570Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflix-gpt-f773e/versions {"name":"projects/634877944868/sites/netflix-gpt-f773e/versions/052fd945dc6f65ce","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[netflix-gpt-f773e]: beginning deploy... 
+[info] i  hosting[netflix-gpt-f773e]: found 16 files in build 
+[debug] [2024-05-11T15:00:50.581Z] [hosting] uploading with 200 concurrency
+[debug] [2024-05-11T15:00:50.958Z] [hosting] hash cache [YnVpbGQ] stored for 16 files
+[debug] [2024-05-11T15:00:50.959Z] [hosting][hash queue][FINAL] {"max":331,"min":2,"avg":27.1875,"active":0,"complete":16,"success":16,"errored":0,"retried":0,"total":16,"elapsed":338}
+[debug] [2024-05-11T15:00:50.960Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/634877944868/sites/netflix-gpt-f773e/versions/052fd945dc6f65ce:populateFiles [none]
+[debug] [2024-05-11T15:00:50.960Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/634877944868/sites/netflix-gpt-f773e/versions/052fd945dc6f65ce:populateFiles {"files":{"/favicon.ico":"eae62e993eb980ec8a25058c39d5a51feab118bd2100c4deebb2a9c158ec11f9","/logo192.png":"3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b","/logo512.png":"ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331","/manifest.json":"aff3449bdc238776f5d6d967f19ec491b36aed5fb7f23ccff6500736fd58494a","/netflix_gpt_logo.ico":"31901e1747131add8d62eae46a27759c3159083172d50f285d8ac8404e3e5623","/robots.txt":"bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49","/asset-manifest.json":"ccc25e2c775ec3462cce6ccc3c79410d43fd55f28b973bc9c161f9f5645dc282","/index.html":"29432c96d5e6a5268d7500fadfecf8bd9cb3ed50a8988cc1ad380f8afeca934b","/static/js/453.67699da7.chunk.js":"f23bb46895bb08d4fa67981b048b9031ee0ffc64f4d38d4520d2191850400f33","/static/css/main.5c781c3c.css.map":"053ccc034c89f20a0398aad4b7d34510da1607e2534269af1e381defda64d0a2","/static/css/main.5c781c3c.css":"cebb712ddc15f8c78f9d22c61cc8dc88f8766454f8a6b4380a21cf28f7a4efb0","/static/js/main.1fc15736.js.LICENSE.txt":"fcf3c01f9ec230da1511ead6030c7e993004167c7198ebde259cc6abe8024f01","/static/js/453.67699da7.chunk.js.map":"607c12c7c37e4c795fce584073e297629722559e4030f48bc9f1c5130520c674","/static/media/information.9c4331cd5fbc551e3cc6.png":"755dfee19dd6aa82e74c3aae4b92088c827f99ea4690a059679fe105f8ca53c7","/static/js/main.1fc15736.js":"24dd3052ab7a2dfbb48dfc790327463f00029f6da34dc26d4cdb6be8c6c6853c","/static/js/main.1fc15736.js.map":"eee4cfd4b2588dbfc25c9fe62a1678952af3a79f892d5b9ecc209013639b526d"}}
+[debug] [2024-05-11T15:00:52.152Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/634877944868/sites/netflix-gpt-f773e/versions/052fd945dc6f65ce:populateFiles 200
+[debug] [2024-05-11T15:00:52.152Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/634877944868/sites/netflix-gpt-f773e/versions/052fd945dc6f65ce:populateFiles {"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/netflix-gpt-f773e/versions/052fd945dc6f65ce/files"}
+[debug] [2024-05-11T15:00:52.153Z] [hosting][populate queue][FINAL] {"max":1196,"min":1196,"avg":1196,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1196}
+[debug] [2024-05-11T15:00:52.154Z] [hosting] uploads queued: 0
+[debug] [2024-05-11T15:00:52.154Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1715439652154}
+[info] i  hosting: upload complete 
+[info] +  hosting[netflix-gpt-f773e]: file upload complete 
+[debug] [2024-05-11T15:00:52.155Z] [hosting] deploy completed after 1583ms
+[debug] [2024-05-11T15:00:52.155Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "site": "netflix-gpt-f773e"
+    },
+    "version": "projects/634877944868/sites/netflix-gpt-f773e/versions/052fd945dc6f65ce"
+  }
+]
+[info] i  hosting[netflix-gpt-f773e]: finalizing version... 
+[debug] [2024-05-11T15:00:52.159Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflix-gpt-f773e/versions/052fd945dc6f65ce updateMask=status%2Cconfig
+[debug] [2024-05-11T15:00:52.159Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflix-gpt-f773e/versions/052fd945dc6f65ce {"status":"FINALIZED","config":{}}
+[debug] [2024-05-11T15:00:53.461Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflix-gpt-f773e/versions/052fd945dc6f65ce 200
+[debug] [2024-05-11T15:00:53.462Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflix-gpt-f773e/versions/052fd945dc6f65ce {"name":"projects/634877944868/sites/netflix-gpt-f773e/versions/052fd945dc6f65ce","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2024-05-11T15:00:51.800089Z","createUser":{"email":"nren115@gmail.com"},"finalizeTime":"2024-05-11T15:00:54.995922Z","finalizeUser":{"email":"nren115@gmail.com"}}
+[debug] [2024-05-11T15:00:53.462Z] [hosting] finalized version for netflix-gpt-f773e:[object Object]
+[info] +  hosting[netflix-gpt-f773e]: version finalized 
+[info] i  hosting[netflix-gpt-f773e]: releasing new version... 
+[debug] [2024-05-11T15:00:53.464Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflix-gpt-f773e/channels/live/releases versionName=projects%2F634877944868%2Fsites%2Fnetflix-gpt-f773e%2Fversions%2F052fd945dc6f65ce
+[debug] [2024-05-11T15:00:53.464Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflix-gpt-f773e/channels/live/releases {}
+[debug] [2024-05-11T15:00:54.575Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflix-gpt-f773e/channels/live/releases 200
+[debug] [2024-05-11T15:00:54.576Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflix-gpt-f773e/channels/live/releases {"name":"projects/634877944868/sites/netflix-gpt-f773e/channels/live/releases/1715439655522000","version":{"name":"projects/634877944868/sites/netflix-gpt-f773e/versions/052fd945dc6f65ce","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2024-05-11T15:00:51.800089Z","createUser":{"email":"nren115@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIuluVs4zi4ra3LT521Alqm1Ue9y0zqaqgRK5Y8hy7gyOP2ngSY"},"finalizeTime":"2024-05-11T15:00:54.995922Z","finalizeUser":{"email":"nren115@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIuluVs4zi4ra3LT521Alqm1Ue9y0zqaqgRK5Y8hy7gyOP2ngSY"}},"type":"DEPLOY","releaseTime":"2024-05-11T15:00:55.522Z","releaseUser":{"email":"nren115@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIuluVs4zi4ra3LT521Alqm1Ue9y0zqaqgRK5Y8hy7gyOP2ngSY"}}
+[debug] [2024-05-11T15:00:54.576Z] [hosting] release: {"name":"projects/634877944868/sites/netflix-gpt-f773e/channels/live/releases/1715439655522000","version":{"name":"projects/634877944868/sites/netflix-gpt-f773e/versions/052fd945dc6f65ce","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2024-05-11T15:00:51.800089Z","createUser":{"email":"nren115@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIuluVs4zi4ra3LT521Alqm1Ue9y0zqaqgRK5Y8hy7gyOP2ngSY"},"finalizeTime":"2024-05-11T15:00:54.995922Z","finalizeUser":{"email":"nren115@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIuluVs4zi4ra3LT521Alqm1Ue9y0zqaqgRK5Y8hy7gyOP2ngSY"}},"type":"DEPLOY","releaseTime":"2024-05-11T15:00:55.522Z","releaseUser":{"email":"nren115@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIuluVs4zi4ra3LT521Alqm1Ue9y0zqaqgRK5Y8hy7gyOP2ngSY"}}
+[info] +  hosting[netflix-gpt-f773e]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/netflix-gpt-f773e/overview
+[info] Hosting URL: https://netflix-gpt-f773e.web.app
