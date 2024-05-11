@@ -136,3 +136,17 @@ We are going to build an Netflix Clone App with following functionality.
 3b. GPT Search Bar
 4. Added Multi Language Feature in the App.
 5. Integrate GPT API 
+6. Using GPT API we fertched the movieNames and saved in redux store with same name.
+7. The fetched names will be passed to an TMDB API called SearchMovieTMDB in gptSearchBar.
+8. It will return a array of promises.
+9. We will await for the promise and load them to redux store movieNames and movieResults.
+10. We are reusing the movielist and movie card by passing the movieNames as title and movieResults as movies.
+11. Add an .env file to hide the critical secret key. .env should be declared in the root folder.
+
+# Memorization 
+
+1. To avoid unwanted api calls.
+2. We have the data already and we need to persist them.
+3. Simply use the useselector to fetch the state.
+4. Use an if condition in useEffect if(!getNowPlayingMovies) calltheapi
+

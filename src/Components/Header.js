@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 import { onAuthStateChanged} from 'firebase/auth';
 import { addUser, removeUser } from '../Utils/UserSlice';
 import { SUPPORTED_LANGUAGES, logo } from '../Utils/Constants';
-import { toggleGptSearchView } from '../Utils/gptSlice';
+import { toggleGptSearchView,removeGptMovieResult } from '../Utils/gptSlice';
 import { changeLanguage } from '../Utils/ConfigSlice';
 
 
@@ -48,6 +48,7 @@ const Header = () => {
 const handleGptSearchClick = () => {
   // Toggle GPT Search
   dispatch(toggleGptSearchView());
+  dispatch(removeGptMovieResult());
 };
 
 const handleLanguageChange = (e) => {
