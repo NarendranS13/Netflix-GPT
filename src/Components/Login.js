@@ -80,8 +80,8 @@ const Login = () => {
               alt = "background"
           />
         </div>
-        <form onClick={(e)=>e.preventDefault()} className='w-3/12 absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white rounded-xl bg-opacity-80'>
-          <h1 className="font-bold text-3xl py-4">{isSignInForm ? "Sign In":"Sign Up"}</h1>
+        <form onClick={(e)=>e.preventDefault()} className='w-full md:w-3/12 absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white rounded-xl bg-opacity-80'>
+          <h1 className="font-bold text-xl md:text-3xl py-4">{isSignInForm ? "Sign In":"Sign Up"}</h1>
             {!isSignInForm && <input ref={name} type='text' placeholder='Full Name' className="p-4 my-4 w-full bg-slate-600 rounded-lg"/>}
             <input ref={email} type='text' placeholder='Email Address or phone number' className="p-4 my-4 w-full bg-slate-600 rounded-lg"/>
             <input ref={password} type='password' placeholder='Password' className="p-4 my-4 w-full bg-slate-600 rounded-lg"/>

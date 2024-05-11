@@ -150,3 +150,19 @@ We are going to build an Netflix Clone App with following functionality.
 3. Simply use the useselector to fetch the state.
 4. Use an if condition in useEffect if(!getNowPlayingMovies) calltheapi
 
+# Instead of Using our own OPENAI Bill.
+1. We can ask the user to provide their own key.
+2. Needs to be impelemented.
+
+
+# Responsive Website Behavior
+1. Current website is suitable only for Destop/Laptop
+2. To make them work for small screen like Mobile. We need to make changes in the CSS.
+3. Used md: for Laptop/Desktop and default values for Mobile
+4. Removed certain element in Mobile.
+5. Corrected the text size, padding accordingly.
+
+# Miscellaneous
+1. Hide the multi language feature in Home page using a state variable.
+2. Toggled the button from GPT Search to Home.
+3. Changed the React App name and logo in the Head tag.
